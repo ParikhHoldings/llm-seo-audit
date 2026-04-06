@@ -15,9 +15,9 @@ export default function Home() {
           <div className="hidden md:flex items-center gap-6">
             <Link href="#how-it-works" className="text-slate-300 hover:text-white text-sm">How It Works</Link>
             <Link href="#pricing" className="text-slate-300 hover:text-white text-sm">Pricing</Link>
-            <Link href="/auth/sign-in" className="text-slate-300 hover:text-white text-sm">Sign In</Link>
-            <Link href="/auth/sign-up" className="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-500 transition-colors">
-              Run Free Audit
+            <Link href="/dashboard" className="text-slate-300 hover:text-white text-sm">Preview dashboard</Link>
+            <Link href="mailto:nathan@happywp.co?subject=LLMBoost%20pilot" className="bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-500 transition-colors">
+              Request pilot audit
             </Link>
           </div>
         </div>
@@ -42,8 +42,8 @@ export default function Home() {
           
           <div className="bg-slate-800/80 p-2 rounded-xl max-w-2xl mx-auto mb-10 border border-slate-700 shadow-2xl flex flex-col sm:flex-row gap-2">
             <input type="text" placeholder="Your business name (e.g. Acme Plumbing)" className="flex-1 bg-slate-900 border border-slate-700 text-white rounded-lg px-4 py-3 outline-none focus:border-indigo-500" />
-            <Link href="/auth/sign-up" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg font-bold hover:from-indigo-500 hover:to-purple-500 transition-all flex items-center justify-center gap-2">
-              Run Live Test <Zap className="w-4 h-4" />
+            <Link href="mailto:nathan@happywp.co?subject=LLMBoost%20pilot" className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-3 rounded-lg font-bold hover:from-indigo-500 hover:to-purple-500 transition-all flex items-center justify-center gap-2">
+              Request Pilot Audit <Zap className="w-4 h-4" />
             </Link>
           </div>
           <p className="text-sm text-slate-500">Free baseline audit. See what AI says about you today.</p>
@@ -140,7 +140,7 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <Link href={plan.name === "DFY Optimization" ? "mailto:nathan@happywp.co" : "/auth/sign-up"} className={`text-center py-3 rounded-lg font-bold transition-all ${plan.hi ? 'bg-indigo-600 hover:bg-indigo-500 text-white' : 'bg-slate-800 hover:bg-slate-700 text-white'}`}>
+                <Link href={plan.name === "DFY Optimization" ? "mailto:nathan@happywp.co" : "mailto:nathan@happywp.co?subject=LLMBoost%20pilot"} className={`text-center py-3 rounded-lg font-bold transition-all ${plan.hi ? 'bg-indigo-600 hover:bg-indigo-500 text-white' : 'bg-slate-800 hover:bg-slate-700 text-white'}`}>
                   {plan.cta}
                 </Link>
               </div>
